@@ -23,7 +23,7 @@ Création d'un site pour une chatterie (sphynx)
 * Chatterie
 * Salle de jeux 
 * Anciens reproducteurs
-* Que sont devenu les chats vendus
+* Que sont devenus les chats vendus
 
 ### Historique 
 *	Historique de la race
