@@ -9,9 +9,9 @@ Création d'un site pour une chatterie (sphynx)
 
 ## Onglet
 
-* Les chatons à vendre 
-  * Fiche type 
-    * Nom, sexe, couleur de la robe, couleur des yeux, date de naissance, signe particulier, texte explicatif (caractère du chat…) 
+### Les chatons à vendre 
+* Fiche type 
+  * Nom, sexe, couleur de la robe, couleur des yeux, date de naissance, signe particulier, texte explicatif (caractère du chat…) 
 * Réserver chat
 
 ### Les chats adultes reproducteurs
