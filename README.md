@@ -28,14 +28,12 @@ Création d'un site pour une chatterie (sphynx)
 
 ### Historique 
 * Historique de la race
-   * D’où sort le chat
-   * Sevrage 
 * Maladie spécifique du chat
 * Historique de la chatterie
 
 ### Livre d’or 
 
 
-Prix : de 900 à 1500€
 
+Prix : de 900 à 1500€
 Pas d'adresse pour page contact 
