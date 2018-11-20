@@ -28,8 +28,8 @@ Création d'un site pour une chatterie (sphynx)
 
 ### Historique 
 * Historique de la race
- * D’où sort le chat
- * Sevrage 
+   * D’où sort le chat
+   * Sevrage 
 * Maladie spécifique du chat
 * Historique de la chatterie
 
