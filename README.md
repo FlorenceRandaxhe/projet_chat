@@ -27,9 +27,9 @@ Création d'un site pour une chatterie (sphynx)
 * Que sont devenus les chats vendus
 
 ### Historique 
-*	Historique de la race
-  * D’où sort le chat
-  * Sevrage 
+* Historique de la race
+ * D’où sort le chat
+ * Sevrage 
 * Maladie spécifique du chat
 * Historique de la chatterie
 
