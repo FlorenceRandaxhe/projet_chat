@@ -18,6 +18,7 @@ Création d'un site pour une chatterie (sphynx)
 * Étalons /Femelles 
   * Description
   * Prix/récompence reçus 
+  * Photos/vidéos
 
 ### Album photo 
 * Chatterie
