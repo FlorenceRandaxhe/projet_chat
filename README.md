@@ -12,17 +12,17 @@ Création d'un site pour une chatterie (sphynx)
 * Les chatons à vendre 
   * Fiche type 
     * Nom, sexe, couleur de la robe, couleur des yeux, date de naissance, signe particulier, texte explicatif (caractère du chat…) 
-* réserver chat
+* Réserver chat
 
 ### Les chats adultes reproducteurs
 * Étalons /Femelles 
-  * description
-  * prix reçus 
+  * Description
+  * Prix/récompence reçus 
 
 ### Album photo 
 * Chatterie
 * Salle de jeux 
-* Anciens reproducteur 
+* Anciens reproducteurs
 * Que sont devenu les chats vendus
 
 ### Historique 
@@ -35,5 +35,5 @@ Création d'un site pour une chatterie (sphynx)
 ### Livre d’or 
 
 
-prix : de 900 à 1500€
-pas d'adresse pour page contact 
+Prix : de 900 à 1500€
+Pas d'adresse pour page contact 
