@@ -1,0 +1,45 @@
+footer{
+  background-color:$footer-bg;
+  text-align: center;
+}
+
+footer div{
+  padding: 0.625em;
+}
+
+footer h3{
+  color: $white;
+}
+
+footer a{
+  color:$footer-font-color;
+  font-size: 0.8125em;
+  transition: $sec;
+  &:hover{
+    color:$white;
+    transition: $sec;
+  }
+}
+
+footer svg{
+  margin: 0.3125em;
+  fill: #a5a5a5;
+  transition: $sec;
+  &:hover{
+    fill: $white;
+    transition: $sec;
+  }
+}
+
+@media screen and (min-width: 1180px){
+  footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding:0.625em 6.25em;
+    li{
+      display: inline-block;
+      padding: 0.625em;
+    }
+  }
+}
