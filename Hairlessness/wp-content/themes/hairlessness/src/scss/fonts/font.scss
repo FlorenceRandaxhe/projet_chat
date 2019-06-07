@@ -1,0 +1,22 @@
+@font-face {
+  font-family: "Playfair Display";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/PlayfairDisplay-Regular.ttf");
+}
+@font-face {
+  font-family: "Raleway";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/Raleway-Regular.ttf");
+}
+@font-face {
+  font-family: "Raleway";
+  font-weight: 600;
+  font-style: normal;
+  src: url("../fonts/Raleway-SemiBold.ttf");
+}
+
+//fonts
+$font-title:"Playfair Display", serif;
+$font-text:"Raleway", "Open Sans", sans-serif;

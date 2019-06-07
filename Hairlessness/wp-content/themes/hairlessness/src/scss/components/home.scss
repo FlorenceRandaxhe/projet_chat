@@ -1,0 +1,72 @@
+.title-contact{
+  font-size: 3.75em;
+}
+
+form label{
+  display: block;
+}
+
+input, textarea{
+  border: none;
+  border-bottom: 1px solid $font-color;
+  padding: 0.8em 0.8em;
+  margin-bottom: 1.875em;
+  &:focus{
+    outline: none;
+    background-color: #F2F2F2;
+  }
+  &::placeholder{
+    font-size: 1.2em;
+  }
+}
+
+textarea{
+  border: 1px solid $font-color;
+  margin-top: 0.3125em;
+}
+
+.contact_intro p a{
+  border-bottom: 2px solid $pink;
+  transition: $sec;
+  &:hover{
+    background-color:$pink;
+    color: $white;
+    transition: $sec;
+  }
+}
+
+#contact{
+  width: 90%;
+  margin: 2em auto;
+
+  .wpcf7, .contact_text{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding-bottom: 3.125em;
+    max-width: 37.5em;
+  }
+}
+
+.wpcf7{
+  padding-top: 2.5em;
+  width: 100%;
+  form input:not(.btn-green), form textarea{
+    width: 95%;
+  }
+  .btn-green{
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1180px){
+  #contact{
+    display: flex;
+    padding-top: 2em;
+  }
+  .wpcf7, .contact_text{
+    width: 50%;
+    padding: 2em;
+  }
+
+}

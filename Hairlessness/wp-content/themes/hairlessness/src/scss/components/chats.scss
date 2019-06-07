@@ -1,0 +1,42 @@
+.kitten, .cat{
+  margin: 3em 0.625em;
+}
+
+.kitten img, .cat img{
+  margin: 0 0.625em 0.625em;
+}
+
+.kitten li, .cat li{
+  margin-bottom: 0.9375em;
+}
+.kitten ul li div:first-of-type, .cat ul li div:first-of-type{
+  font-weight: 700;
+}
+
+
+@media screen and (min-width: 1180px){
+  .kitten_description{
+    display: flex;
+    justify-content: space-between;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  .femelle_description{
+    display: flex;
+    justify-content: space-between;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .male_description{
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    max-width: 960px;
+    margin: 0 auto;
+    p{
+      width: 55%;
+    }
+  }
+}

@@ -1,0 +1,73 @@
+.livre-dor{
+  margin-bottom: 5.625em;
+}
+.comment{
+  margin: 1.875em auto;
+  text-align: left;
+  max-width: 50em;
+  padding: 0 2em 3em;
+  time{
+    font-size: 0.875em;
+  }
+  .comment_name{
+    font-family: $font-title;
+    font-size: 1.5em;
+  }
+  .comment_content{
+    padding-top: 1em;
+  }
+}
+
+.nextPage ul li{
+  display: inline-block;
+  padding: 0.625em;
+  .onPage{
+    font-weight: 600;
+  }
+}
+
+#add-comment {
+  padding: 3.125em 0;
+  color: $white;
+  background-color: $green;
+  form{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding-bottom: 3.125em;
+    max-width: 37.5em;
+    width: 90%;
+  }
+  form {
+    text-align: left;
+    padding-top: 3.125em;
+
+    input, textarea{
+      background-color: $green;
+      border-bottom-color: $white;
+      font-size: 0.9em;
+      color: #F0F0F0;
+      &:focus{
+        background-color: $green-hover;
+      }
+      &::placeholder{
+        color: #F0F0F0;
+      }
+    }
+    textarea{
+      border: 1px solid $white;
+      margin-top: 0.3125em;
+    }
+    .btn-white{
+      padding: 0.625em 1.125em;
+      color: $green;
+      font-size: 1em;
+      font-weight: 600;
+      background-color: $white;
+      border: none;
+      &:hover{
+        background-color: #e1e1e1;
+      }
+    }
+  }
+}
