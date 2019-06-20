@@ -16,40 +16,30 @@ get_header() ?>
             </ul>
         </div>
         <section class="history">
-            <h2 aria-level="2" role="heading" class="sub-title"><?php the_field('title'); ?></h2>
-
+            <h2 aria-level="2" role="heading" class="sub-title">Historique de la race</h2>
             <?php if( have_rows('caractere') ):  while( have_rows('caractere') ): the_row(); ?>
-
             <h3 aria-level="3" role="heading" class="title" id="nav-1"><?php the_sub_field('sous_titre'); ?></h3>
             <div class="histo_content">
                 <?php the_sub_field('paragraphe_1'); ?>
             </div>
-
             <div class="histo_picture">
                 <?php
                 $image = get_sub_field('photo_1');?>
                     <img src="<?= $image['url']; ?>" width="<?= $image['width']; ?>" height="<?= $image['height']; ?>">
             </div>
-
-
             <div class="histo_content">
                 <?php the_sub_field('paragraphe_2'); ?>
             </div>
-
             <div class="histo_picture">
                 <?php
                 $image_2 = get_sub_field('photo_2');?>
                     <img src="<?= $image_2['url']; ?>" width="<?= $image_2['width']; ?>" height="<?= $image_2['height']; ?>">
             </div>
-
             <div class="histo_content">
                 <?php the_sub_field('paragraphe_3'); ?>
             </div>
-
             <?php endwhile; endif; ?>
-
             <?php if( have_rows('concours') ):  while( have_rows('concours') ): the_row(); ?>
-
                 <h3 aria-level="3" role="heading" class="title" id="nav-2"><?php the_sub_field('sous_titre'); ?></h3>
                 <div class="histo_content">
                     <?php the_sub_field('paragraphe_1'); ?>
@@ -59,7 +49,6 @@ get_header() ?>
                     $image = get_sub_field('photo_1');?>
                     <img src="<?= $image['url']; ?>" width="<?= $image['width']; ?>" height="<?= $image['height']; ?>">
                 </div>
-
                 <div class="histo_content">
                     <?php the_sub_field('paragraphe_2'); ?>
                 </div>
@@ -81,6 +70,13 @@ get_header() ?>
                     $image_5 = get_sub_field('photo_5');?>
                     <img src="<?= $image_5['url']; ?>" width="<?= $image_5['width']; ?>" height="<?= $image_5['height']; ?>">
                 </div>
+                <?php
+                $file = get_sub_field('loof');
+                if( $file ): ?>
+                <div class="histo_content">
+                    <p class="link_pdf">Pour les concours voir la fiche <a href="<?= $file['url']; ?>"><abbr title="Livre Officiel des Origines Félines">LOOF</abbr></a></p>
+                </div>
+                <?php endif; ?>
                 <div class="histo_picture">
                     <?php
                     $image_6 = get_sub_field('photo_6');
@@ -92,18 +88,13 @@ get_header() ?>
                     <img src="<?= $image_8['url']; ?>" width="<?= $image_8['width']; ?>" height="<?= $image_8['height']; ?>">
                 </div>
             <?php endwhile; endif; ?>
-
             <?php if( have_rows('origine') ):  while( have_rows('origine') ): the_row(); ?>
-
                 <h3 aria-level="3" role="heading" class="title" id="nav-3"><?php the_sub_field('sous_titre'); ?></h3>
                 <div class="histo_content">
                     <?php the_sub_field('paragraphe_1'); ?>
                 </div>
-
             <?php endwhile; endif; ?>
-
             <?php if( have_rows('sante') ):  while( have_rows('sante') ): the_row(); ?>
-
                 <h3 aria-level="3" role="heading" class="title" id="nav-4"><?php the_sub_field('sous_titre'); ?></h3>
                 <div class="histo_content">
                     <?php the_sub_field('paragraphe_1'); ?>
@@ -120,23 +111,17 @@ get_header() ?>
                 <div class="histo_content">
                     <?php the_sub_field('paragraphe_3'); ?>
                 </div>
-
             <?php endwhile; endif; ?>
-
-
-            <h2 aria-level="2" role="heading" class="sub-title"><?php the_field('title_copy'); ?></h2>
-
+        </section>
+        <section class="history">
+            <h2 aria-level="2" role="heading" id="chatterie" class="sub-title">Historique de la chatterie</h2>
             <?php if( have_rows('chatterie') ):  while( have_rows('chatterie') ): the_row(); ?>
-
                 <h3 aria-level="3" role="heading" class="title" id="nav-5"><?php the_sub_field('sous_titre'); ?></h3>
                 <div class="histo_content">
                     <?php the_sub_field('paragraphe_1'); ?>
                 </div>
-
             <?php endwhile; endif; ?>
-
             <?php if( have_rows('naissance') ):  while( have_rows('naissance') ): the_row(); ?>
-
                 <h3 aria-level="3" role="heading" class="title" id="nav-6"><?php the_sub_field('sous_titre'); ?></h3>
                 <div class="histo_content">
                     <?php the_sub_field('paragraphe_1'); ?>
@@ -173,7 +158,6 @@ get_header() ?>
                     <?php the_sub_field('paragraphe_4'); ?>
                 </div>
             <?php endwhile; endif; ?>
-
         </section>
     </div>
     <div id="back-to-top">
@@ -185,5 +169,4 @@ get_header() ?>
         </a>
     </div>
 </main>
-
 <?php get_footer() ?>

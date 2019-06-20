@@ -25,7 +25,10 @@ textarea{
   margin-top: 0.3125em;
 }
 
-.contact_intro p a{
+.contact_intro p{
+  font-size: 1.125em;
+}
+.contact_intro p a, .link_pdf a{
   border-bottom: 2px solid $pink;
   transition: $sec;
   &:hover{

@@ -20,9 +20,8 @@ for (i = 0; i < img.length; i++) {
     img[i].onclick = function () {
         modal.style.display = "block";
         modalImg.src = this.src;
-    }
+    };
+    close.onclick = function () {
+        modal.style.display = "none";
+    };
 }
-
-close.onclick = function () {
-    modal.style.display = "none";
-};

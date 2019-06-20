@@ -19,6 +19,7 @@ function custom_wp_title($title) {
 
 // create a custom post
 function hl_register_post_types(){
+    //chatons à adopter
     register_post_type('chatons', [
         'label' => 'Chatons',
         'labels' => [
@@ -32,6 +33,7 @@ function hl_register_post_types(){
         'menu_position'=> 5,
     ]);
 
+    // chats adultes reproducteurs
     register_post_type('chats', [
         'label' => 'Chats',
         'labels' => [
@@ -45,6 +47,7 @@ function hl_register_post_types(){
         'menu_position'=> 5,
     ]);
 
+    // Commentaires du livre d'or
     register_post_type('comments', [
         'label' => 'Commentaires',
         'labels' => [
@@ -79,6 +82,7 @@ function hl_get_page_url($templateName) {
     return get_page_link(hl_get_page_id_from_template($templateName));
 }
 
+// Menu
 function hl_getMenu($location){
     $menu = [];
     $locations = get_nav_menu_locations();
@@ -111,3 +115,22 @@ function remove_menus() {
 }
 add_action( 'admin_menu', 'remove_menus' );
 
+// remove text area on page template
+
+function remove_editor() {
+    if (isset($_GET['post'])) {
+        $id = $_GET['post'];
+        $template = get_post_meta($id, '_wp_page_template', true);
+        switch ($template) {
+            case 'template-parts/template-album.php':
+            case 'index.php':
+            case 'template-parts/template-historique.php':
+                remove_post_type_support('page', 'editor');
+                break;
+            default :
+                // Don't remove any other template.
+                break;
+        }
+    }
+}
+add_action('init', 'remove_editor');
