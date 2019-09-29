@@ -41,7 +41,7 @@
                     <h2 class="hidden" aria-level="2" role="heading">Navigation principale</h2>
                     <ul class="nav_list">
                         <?php foreach (hl_getMenu('main') as $item): ?>
-                            <li class="nav_item"><a href="<?= $item->url; ?>" class="nav_link"><?= $item->label; ?></a></li>
+                            <li class="nav_item"><a href="<?= $item->url; ?>" class="nav_link <?= $item->current ? 'nav_link--current' : '';?>"><?= $item->label; ?></a></li>
                         <?php endforeach; ?>
                             <li class="nav_item"><a href="https://www.facebook.com/chatterie.dhairlessness/" title="Page Facebook" class="fb">
                                 <span class="hidden">Vers la page Facebook d'Hairlessness</span>

@@ -38,13 +38,9 @@ header{
     border:none;
     position: relative;
     text-transform: uppercase;
-    &.active{
-      font-weight: 600;
-      color: $green
-    }
+    
     &:not(.fb):hover{
       color: $green;
-      font-weight: 600;
       transition: $sec;
     }
   }
@@ -155,9 +151,6 @@ header{
     visibility: visible;
     opacity: 1;
     top: 90px;
-    .active{
-      border-top: 2px solid $green;
-    }
   }
 
   .dropdown-menu a:before{
@@ -170,6 +163,11 @@ header{
     border-top: 2px solid $green;
     left: 0;
     top: -1px;
+  }
+
+  .nav_link--current{
+    color:$green;
+    font-weight:600;
   }
 
   .dropdown-menu a:not(.active):not(.fb):hover:before{

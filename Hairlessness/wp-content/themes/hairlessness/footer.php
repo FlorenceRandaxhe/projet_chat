@@ -25,7 +25,7 @@
         </div>
     </div>
     <div class="footer_bottom">
-        <p>Site web réalisé par <a href="http://hepl01.cblue.be/~user13/portfolio/">Florence Randaxhe</a></p>
+        <p>Site web réalisé par <a href="http://florence-randaxhe.com/">Florence Randaxhe</a></p>
     </div>
 </footer>
 <script src="<?= get_template_directory_uri(); ?>/public/js/main.js" type="text/javascript"></script>

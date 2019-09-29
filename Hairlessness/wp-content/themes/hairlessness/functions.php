@@ -60,6 +60,8 @@ function hl_register_post_types(){
         'public' => true,
         'menu_position'=> 5,
         'menu_icon' => 'dashicons-testimonial',
+
+
     ]);
 }
 add_action('init', 'hl_register_post_types');
@@ -84,14 +86,17 @@ function hl_get_page_url($templateName) {
 
 // Menu
 function hl_getMenu($location){
+    global $wp_post;
+    $wp_post = get_queried_object_id();
     $menu = [];
     $locations = get_nav_menu_locations();
-    foreach (wp_get_nav_menu_items ($locations[$location]) as $post)
+    foreach (wp_get_nav_menu_items ($locations[$location]) as $post) 
     {
         $item = new stdClass();
         $item->url = $post->url;
         $item->label = $post->title;
         $item->children = [];
+        $item->current = ($post->object_id == $wp_post);
         if (!$post->menu_item_parent) {
             $menu[$post->ID] = $item;
         } else{
@@ -134,3 +139,22 @@ function remove_editor() {
     }
 }
 add_action('init', 'remove_editor');
+
+/**
+ *
+ * Handle custom comment formular
+ */
+function hl_get_comment_form(){
+    return'dw-custom-form-comment';
+}
+//set variable as global to be able to use it everywhere in wp ex: global $tatitoto = tata
+if($_POST['hl_comment_form'] ?? false === hl_get_comment_form()){
+    //charger le fichier de class de controller
+    require 'App/CommentFormController.php';
+    //exceuter le traitement du form
+    $commentForm = new CommentFormController($_POST);
+    //stocker le feedback du form dans $_SESSION
+    $_SESSION['comment'] = $commentForm;
+    //rediriger l'utilisateur vers la page courante pour afficher le feedback et éviter le renvois intempestif d'un form lors d'un rechargement de la page.
+    wp_redirect('http://localhost/hairlessness/livre-dor/');exit;
+}

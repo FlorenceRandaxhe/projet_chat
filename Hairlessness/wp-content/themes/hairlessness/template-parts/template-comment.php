@@ -5,6 +5,7 @@
 get_header() ?>
     <main>
         <div class="content">
+            
             <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                 <div class="head_text"><?php the_content(); ?></div>
             <?php endwhile; endif; ?>
@@ -30,28 +31,17 @@ get_header() ?>
                 <?php endif; ?>
             </section>
             <section id="add-comment">
-                <?php
-                if (isset( $_POST['send_comment'])){
-                    $name = htmlspecialchars($_POST['pseudo']);
-                    $comment = htmlspecialchars($_POST['message']);
-                    if (!empty($name) AND !empty($comment)){
-                        $my_post = array('post_title' =>  $name, 'post_content' =>  $comment, 'post_status' => 'pending', 'post_type' => 'comments');
-                        wp_insert_post($my_post);
-                        hl_get_page_url("template-comment.php");
-                        echo "Votre commentaire à bien été envoyé !";
-                        exit;
-                    } else {
-                        echo "Tous les champs ne sont pas remplis !";
-                    }
-                }
-                ?>
                 <div class="share">
                     <h2 aria-level="2" role="heading" class="title">Laisser un commentaire</h2>
-                    <form action="" method="POST">
+                    <form action="#" method="POST">
+                        <input type="hidden" name="hl_comment_form" value="<?= hl_get_comment_form(); ?>">
+
                         <label for="pseudo">Nom</label>
-                        <input type="text" id="name" name="pseudo" placeholder="Jean Dupont">
+                        <input type="text" id="name" name="pseudo">
+
                         <label for="message">Message</label>
-                        <textarea id="message" name="message" placeholder="Tapez votre message ici..." rows="6"></textarea>
+                        <textarea id="message" name="message" rows="6"></textarea>
+
                         <button type="submit" class="btn-white" name="send_comment">Envoyer</button>
                     </form>
                 </div>
