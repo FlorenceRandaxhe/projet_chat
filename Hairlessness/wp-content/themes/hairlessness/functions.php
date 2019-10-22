@@ -49,9 +49,9 @@ function hl_register_post_types(){
 
     // Commentaires du livre d'or
     register_post_type('comments', [
-        'label' => 'Commentaires',
+        'label' => 'Livre d\'or',
         'labels' => [
-            'singular_name' => 'Commentaire',
+            'singular_name' => 'Livre d\'or',
             'add_new_item' => 'Gèrer les commentaires du livre d\'or'
         ],
         'description' => 'Liste des commentaires',
